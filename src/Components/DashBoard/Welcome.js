@@ -1,5 +1,5 @@
 import React from 'react';
-import Arrow from '../Home/Arrow';
+
 
 const Welcome = () => {
     return (

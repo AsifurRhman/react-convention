@@ -4,8 +4,7 @@ import React, { useEffect } from 'react';
 import img1 from '../../conven/10018.png'
 import img2 from '../../conven/10019.png'
 import img3 from '../../conven/10020.png'
-import Arrow from './Arrow';
-import Chat from './Chat';
+
 import Dish from './Dish';
 import FoodPackage from './FoodPackage';
 const Menu = () => {
@@ -22,7 +21,7 @@ const Menu = () => {
     }, [])
     return (
         <div>
-            <h1 className='text-center text-4xl sp-style mt-10 text-green-700'>Our Packages</h1>
+            <h1 className='text-center text-4xl sp-style mt-10 text-cyan-700'>Our Food Packages</h1>
             <div className="">
         <div  className='ml-10 mr-10 grid grid-cols-1 md:grid-cols-3 gap-5 py-10 rounded-md'>
 

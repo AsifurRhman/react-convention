@@ -2,7 +2,7 @@ import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect } from 'react';
 import image from '../../images/Thinking.png'
-import Arrow from '../Home/Arrow';
+
 import Accordion from './Compo/Accordion'
 const FAQ = () => {
   useEffect(() => {

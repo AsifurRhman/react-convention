@@ -13,7 +13,7 @@ const FoodPackage = () => {
       }, [])
     return (
         <div>
-           <h1 className='text-center text-4xl text-green-700 mt-12'>Our Food Platters</h1>  
+           <h1 className='text-center text-4xl text-cyan-700 mt-12'>Our Food Platters</h1>  
         <div className='mt-28'>
        {/* <h1 className='serv-head text-3xl text-gray-500 font-medium text-center py-4'>Soultion for moving better and felling a healthier..</h1> */}
       

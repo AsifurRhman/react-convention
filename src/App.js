@@ -5,7 +5,7 @@ import Navbar from './Components/Shared/Navbar/Navbar';
 import Home from './Components/Home/Home';
 import Footer from './Components/Shared/Footer/Footer';
 import Service from './Components/Home/Service/Service';
-import Blog from './Components/Blog/Blog';
+
 import About from './Components/About/About';
 import Contact from './Components/Contact/Contact';
 import Login from './Components/Login/Login';
@@ -29,7 +29,7 @@ import MyOrder from './Components/DashBoard/User/MyOrder'
 import ManageOrder from './Components/DashBoard/Admin/ManageOrder';
 import Discount from './Components/DashBoard/Admin/Discount';
 import Payment from './Components/DashBoard/User/Payment';
-import Chat from './Components/Home/Chat';
+
 
 import AllClient from './Components/DashBoard/Admin/AllClient';
 import AddPackage from './Components/DashBoard/Admin/AddPackage';

@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import useService from '../../Hooks/useService';
 import BestProject from '../BestProject/BestProject';
 import Happy from '../Happy/Happy';
-import Why from '../Why/Why';
+
 import Feature from './Feature';
 import ReviewSlider from '../Review/ReviewSlider'
 import { BiWorld } from 'react-icons/bi';
@@ -20,8 +20,7 @@ import BusinessSummary from '../BusinessSummary/BusinessSummary';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import Spinner from '../Spinner/Spinner';
-import Arrow from './Arrow';
-import Chat from './Chat';
+
 
 
 const Home = () => {
@@ -65,18 +64,18 @@ const Home = () => {
             <h1 className="tracking-widest mt-10 best-moment text-center text-3xl">Some Of Our Best Memories</h1>
             {/* <BestProject></BestProject> */}
             <div>
-                <Link to='/weddingMemory' className='mx-auto'> <button className='text-white text-2xl sp-style bg-blue-700 px-5 mt-10 ml-48'>Wedding Memory</button></Link>
-                <Link to='/birthMemory' className='mx-auto'> <button className='text-white text-2xl sp-style bg-blue-700 px-5 mt-10 ml-48'>Birthday Memory</button></Link>
-                <Link to='/busiMemory' className='mx-auto'> <button className='text-white text-2xl sp-style bg-blue-700 px-5 mt-10 ml-48'>Business Memory</button></Link>
+                <Link to='/weddingMemory' className='mx-auto'> <button className='text-white text-2xl sp-style bg-cyan-700 px-5 mt-10 ml-48'>Wedding Memory</button></Link>
+                <Link to='/birthMemory' className='mx-auto'> <button className='text-white text-2xl sp-style bg-cyan-700 px-5 mt-10 ml-48'>Birthday Memory</button></Link>
+                <Link to='/busiMemory' className='mx-auto'> <button className='text-white text-2xl sp-style bg-cyan-700 px-5 mt-10 ml-48'>Business Memory</button></Link>
             </div>
 
-            <h1 className=" font-bold text-purple-900 mt-10 sp-style text-center text-3xl">
+            <h1 className=" font-bold text-cyan-700 mt-10 sp-style text-center text-3xl">
                 Features & Facilities
             </h1>
             <Feature />
             <div className='mt-28'>
 
-                <h1 className='text-3xl sp-style text-green-700 font-medium text-center py-4'>
+                <h1 className='text-3xl sp-style text-cyan-700 font-medium text-center py-4'>
 
                     Our Best Packages
                 </h1>
@@ -86,13 +85,21 @@ const Home = () => {
                     }
                 </div>
             </div>
-            <div className='flex items-center justify-evenly'>
-                <Link to='/wedding' className=''> <button className='text-white text-xl sp-style bg-blue-700 px-5 mt-10 '>Wedding</button></Link>
-                <Link to='/birthday' className=''> <button className='text-white text-xl sp-style bg-blue-700 px-5 mt-10 '>Birthday</button></Link>
-                <Link to='/businessMeeting' className=''> <button className='text-white text-xl sp-style bg-blue-700 px-5 mt-10 '>Corporation Events</button></Link>
-                <Link to='/reunion' className=''> <button className='text-white text-xl sp-style bg-blue-700 px-5 mt-10 '>Reunion & Fairwell Events</button></Link>
-            </div>
-            <button style={{ marginLeft: '45%' }} className="mt-10 text-center cursor:pointer happy bg-[#3005ee] hover:bg-[#141414]  px-4 py-2 mb-2 rounded-full text-white" onClick={() => navigate('/services')}>
+            <div className="flex flex-col md:flex-row lg:flex-row items-center justify-evenly">
+  <Link to="/wedding" className="">
+    <button className="text-white text-lg sp-style bg-cyan-700 px-6 py-3 m-2">Wedding</button>
+  </Link>
+  <Link to="/birthday" className="">
+    <button className="text-white text-lg sp-style bg-cyan-700 px-6 py-3 m-2">Birthday</button>
+  </Link>
+  <Link to="/businessMeeting" className="">
+    <button className="text-white text-lg sp-style bg-cyan-700 px-6 py-3 m-2">Corporation Events</button>
+  </Link>
+  <Link to="/reunion" className="">
+    <button className="text-white text-lg sp-style bg-cyan-700 px-6 py-3 m-2">Reunion & Fairwell Events</button>
+  </Link>
+</div>
+            <button style={{ marginLeft: '45%' }} className="mt-10 text-center cursor:pointer happy bg-[#2e82c7] hover:bg-[#141414]  px-4 py-2 mb-2 rounded-full text-white" onClick={() => navigate('/services')}>
                 See More
             </button>
 

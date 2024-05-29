@@ -2,8 +2,7 @@ import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect } from 'react';
 import useService from '../../../Hooks/useService';
-import Arrow from '../Arrow';
-import Chat from '../Chat';
+
 import SingleService from '../singleService/SingleService';
 
 const Service = () => {
@@ -32,7 +31,7 @@ const Service = () => {
         <div>
              <div className='mt-28'>
            
-            <h1 className='text-3xl sp-style text-green-700 font-medium text-center py-4'> Our packages</h1>
+            <h1 className='text-3xl sp-style text-cyan-700 font-medium text-center py-4'> Our packages</h1>
             <div className='grid md:grid-cols-3  grid-cols-1 gap-10 container mx-auto my-10 px-8 md:px-0'>
                 {
                     services.slice(3,30).map(service => <SingleService key={service._id} service={service}></SingleService>)

@@ -33,7 +33,6 @@ const MyOrder = () => {
     const orderDelete = (id) => {
 
 
-
         fetch(`https://royal-convention-server.onrender.com/myorder/${id}`, {
             method: 'DELETE',
             headers: {

@@ -1,10 +1,10 @@
 import { faArrowUp, faEnvelope, faLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect } from 'react';
-import Arrow from '../Home/Arrow.js';
+
 import Leaflet from '../Leaflet/Leaflet.js';
 import './Contact.css'
-import Chat from '../Home/Chat.js';
+
 
 const Contact = () => {
   useEffect(() => {
