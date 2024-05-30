@@ -30,7 +30,7 @@ const navigate= useNavigate()
             console.log(updateItem);
             
            
-            fetch(`https://royal-convention-server.onrender.com/package/${id}`, {
+            fetch(`https://royal-convention-server.vercel.app/package/${id}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'

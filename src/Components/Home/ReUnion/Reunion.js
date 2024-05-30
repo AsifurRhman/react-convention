@@ -5,7 +5,7 @@ const Reunion = () => {
     const [reunion, setReunionStage] = useState([])
    
     useEffect(() => {
-        fetch('https://royal-convention-server.onrender.com/reunion')
+        fetch('https://royal-convention-server.vercel.app/reunion')
         .then(response => response.json())
     .then(data=>  setReunionStage(data))
       }, [])

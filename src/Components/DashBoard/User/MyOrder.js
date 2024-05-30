@@ -19,7 +19,7 @@ const MyOrder = () => {
 
     const email = user?.email
     //console.log(email, 'order-email');
-    const { data: orders, isLoading, refetch } = useQuery('orders', () => fetch(`https://royal-convention-server.onrender.com/singleOrder?email=${email}`, {
+    const { data: orders, isLoading, refetch } = useQuery('orders', () => fetch(`https://royal-convention-server.vercel.app/singleOrder?email=${email}`, {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('token')}`
@@ -33,7 +33,7 @@ const MyOrder = () => {
     const orderDelete = (id) => {
 
 
-        fetch(`https://royal-convention-server.onrender.com/myorder/${id}`, {
+        fetch(`https://royal-convention-server.vercel.app/myorder/${id}`, {
             method: 'DELETE',
             headers: {
                 "content-type": "application/json",

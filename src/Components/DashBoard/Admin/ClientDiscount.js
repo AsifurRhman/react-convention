@@ -10,7 +10,7 @@ const ClientDiscount = ({ send, index, }) => {
         const sendEmail = email;
         const sendDiscount = e.target.discount.value
         console.log(sendDiscount, sendEmail);
-        fetch(`https://royal-convention-server.onrender.com/discount/${sendEmail}`, {
+        fetch(`https://royal-convention-server.vercel.app/discount/${sendEmail}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json',

@@ -6,7 +6,7 @@ import Modal from '../Modal';
 import ManageTable from './ManageTable'
 const ManageOrder = () => {
     const [modal, setModal] = useState({})
-    const { data: allorders, isLoading, refetch } = useQuery('allorders', () => fetch(`https://royal-convention-server.onrender.com/order`, {
+    const { data: allorders, isLoading, refetch } = useQuery('allorders', () => fetch(`https://royal-convention-server.vercel.app/order`, {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('token')}`
@@ -20,7 +20,7 @@ const ManageOrder = () => {
 
 
 
-    //     fetch(`https://royal-convention-server.onrender.com//order/${id}`, {
+    //     fetch(`https://royal-convention-server.vercel.app//order/${id}`, {
     //         method: 'DELETE',
     //         headers: {
     //             "content-type": "application/json",

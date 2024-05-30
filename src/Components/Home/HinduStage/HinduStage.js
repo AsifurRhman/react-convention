@@ -8,7 +8,7 @@ const HinduStage = () => {
    const [hindustage, setHinduStage] = useState([])
    
     useEffect(() => {
-        fetch('https://royal-convention-server.onrender.com/hindustage')
+        fetch('https://royal-convention-server.vercel.app/hindustage')
         .then(response => response.json())
     .then(data=>setHinduStage(data))
       }, [])
