@@ -5,6 +5,7 @@ import { toast, ToastContainer } from 'react-toastify';
 
 import { auth } from '../../firebase.init';
 import useService from '../../Hooks/useService';
+import useAdmin from '../../Hooks/useAdmin';
 
 
 const CheckOut = () => {
@@ -30,7 +31,8 @@ const CheckOut = () => {
     const [birthdayStage,setBirthdayStage] = useState([])
     const [birthdayStagePrice, setBirthdayStagePrice] = useState(0)
     
-    const [themebirthdayStage,setThemeBirthdayStage] = useState([])
+    const [themebirthdayStage, setThemeBirthdayStage] = useState([])
+    console.log(themebirthdayStage,"themebirthdayStage==")
     const [themebirthdayStagePrice, setThemeBirthdayStagePrice] = useState(0)
     
     const [businessStage,setBusinessStage] = useState([])
@@ -57,7 +59,7 @@ console.log(packageName,'packageName')
 
  
     useEffect(() => {
-        fetch('https://royal-convention-server.onrender.com/package')
+        fetch('https://royal-convention-server.vercel.app/package')
             .then(response => response.json())
             .then(data => setServices(data))
     }, [])
@@ -89,47 +91,47 @@ console.log(packageName,'packageName')
        
     }, [singlePackagePrice , singlePhotoPackagePrice , singleFoodPackagePrice , hinduStagePrice , weddingStagePrice, holudStagePrice, birthdayStagePrice ,themebirthdayStagePrice , businessStagePrice, reunionStagePrice,singlePhotoPackagePrice])
     useEffect(() => {
-        fetch('https://royal-convention-server.onrender.com/photography')
+        fetch('https://royal-convention-server.vercel.app/photography')
             .then(response => response.json())
             .then(data => setPhotoPackage(data))
     }, [])
     useEffect(() => {
-        fetch('https://royal-convention-server.onrender.com/food.json')
+        fetch('https://royal-convention-server.vercel.app/food')
             .then(response => response.json())
             .then(data => setSingleFoodPackage(data))
     }, [])
     useEffect(() => {
-        fetch('https://royal-convention-server.onrender.com/wedding.json')
+        fetch('https://royal-convention-server.vercel.app/wedding')
             .then(response => response.json())
             .then(data => setWeddingStage(data))
     }, [])
     useEffect(() => {
-        fetch('https://royal-convention-server.onrender.com/holud.json')
+        fetch('https://royal-convention-server.vercel.app/holud')
             .then(response => response.json())
             .then(data => setHoludStage(data))
     }, [])
     useEffect(() => {
-        fetch('https://royal-convention-server.onrender.com/hinduStage.json')
+        fetch('https://royal-convention-server.vercel.app/hinduStage')
             .then(response => response.json())
             .then(data => sethinduStage(data))
     }, [])
     useEffect(() => {
-        fetch('https://royal-convention-server.onrender.com/normalBirthday.json')
+        fetch('https://royal-convention-server.vercel.app/normalBirthday')
             .then(response => response.json())
             .then(data => setBirthdayStage(data))
     }, [])
     useEffect(() => {
-        fetch('https://royal-convention-server.onrender.com/themeBirthday.json')
+        fetch('https://royal-convention-server.vercel.app/themeBirthday')
             .then(response => response.json())
             .then(data => setThemeBirthdayStage(data))
     }, [])
     useEffect(() => {
-        fetch('https://royal-convention-server.onrender.com/business.json')
+        fetch('https://royal-convention-server.vercel.app/business')
             .then(response => response.json())
             .then(data => setBusinessStage(data))
     }, [])
     useEffect(() => {
-        fetch('https://royal-convention-server.onrender.com/reunion.json')
+        fetch('https://royal-convention-server.vercel.app/reunion')
             .then(response => response.json())
             .then(data => setReunionStage(data))
     }, [])
@@ -149,9 +151,15 @@ console.log(packageName,'packageName')
     //console.log(found[0]);
 
     const [user] = useAuthState(auth)
+    const [admin] = useAdmin(user)
 
-
-
+    
+    if (admin) {
+        toast.error("Admin can't booked any packages")
+        return navigate("/")
+    }
+    
+    
     const confirmOrder = e => {
         e.preventDefault();
         console.log(e.target, "chck e")
@@ -197,7 +205,7 @@ console.log(packageName,'packageName')
         const sendOrder = { name, email, phone, sendPackage, sendPrice, adults, checkin, startTime, description, image, Address, Photography,sendFoodMenu,decoration,hinduStage,holudStage }
        
        console.log(sendOrder,'sendOrder')
-        fetch(`https://royal-convention-server.onrender.com/order`, {
+        fetch(`https://royal-convention-server.vercel.app/order`, {
             method: "POST",
             headers: {
                 "content-type": "application/json",
@@ -536,8 +544,8 @@ console.log(packageName,'packageName')
   
   
     return (
-        <div>
-
+        <>
+     
             <div style={{ margin: "10%" }}>
                 <h1 className='text-center text-3xl sp-style mt-20'>Fill the form,If you want to purchase this service</h1>
                 <form onSubmit={confirmOrder} className='mt-5 add-cover'>
@@ -680,7 +688,7 @@ console.log(packageName,'packageName')
                 </form>
 
             </div>
-        </div>
+        </>
 
     );
 };

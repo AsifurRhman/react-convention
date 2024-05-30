@@ -132,7 +132,7 @@ const Register = () => {
 
                 <div className="grid xl:grid-cols-2 xl:gap-6">
                     <div className="relative z-0 mb-6 w-full group">
-                        <input type="text" name="floating_first_name" id="floating_first_name" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required=""
+                        <input type="text" name="floating_first_name" id="floating_first_name" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required=""
                             {...register("firstname", {
                                 required: 'first name is Required',
                                 minLength: {
@@ -148,7 +148,7 @@ const Register = () => {
                         <p className='text-red-500 text-sm'>{errors?.firstname?.message}</p>
                     </div>
                     <div className="relative z-0 mb-6 w-full group">
-                        <input type="text" name="floating_last_name" id="floating_last_name" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required=""
+                        <input type="text" name="floating_last_name" id="floating_last_name" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required=""
                             {...register("lastname", {
                                 required: 'last name is Required',
                                 minLength: {
@@ -168,7 +168,7 @@ const Register = () => {
 
                 </div>
                 <div className="relative z-0 mb-6 w-full group">
-                    <input type="email" name="floating_email" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required=""
+                    <input type="email" name="floating_email" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required=""
 
                         {...register("email", {
                             required: 'Email is required',
@@ -190,7 +190,7 @@ const Register = () => {
 
                 </div>
                 <div className="relative z-0 mb-6 w-full group">
-                    <input type={show ? 'password' : "text"} name="floating_password" id="floating_password" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required=""
+                    <input type={show ? 'password' : "text"} name="floating_password" id="floating_password" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required=""
                         {...register('password', {
                             required: 'Password is required',
                             pattern: {
@@ -226,7 +226,7 @@ const Register = () => {
 
 
                 <div className="relative z-0 mb-6 w-full group">
-                    <input type={conshow ? 'password' : "text"} name="repeat_password" id="floating_repeat_password" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required=""
+                    <input type={conshow ? 'password' : "text"} name="repeat_password" id="floating_repeat_password" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required=""
 
                         {...register('confirmPassword', {
                             required: 'confirm-Password is required',
@@ -263,12 +263,12 @@ const Register = () => {
 
                     <input id="terms" aria-describedby="terms" type="checkbox" className="w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required />
                     <div className="ml-3 text-sm ">
-                        <label htmlFor="terms" className="font-medium text-gray-900 dark:text-gray-300">I agree with the <a href="#" className="text-blue-600 hover:underline dark:text-blue-500">terms and conditions</a></label>
+                        <label htmlFor="terms" className="font-medium text-gray-900 ">I agree with the <a href="#" className="text-blue-600 hover:underline dark:text-blue-500">terms and conditions</a></label>
                     </div>
                 </div>
 
 
-                <button type="submit" className="border-2 border-green-700   hover:bg-green-700 hover:text-white transition-all transition-duration:150ms font-medium hover:font-medium focus:outline-none  rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center  ">Submit</button>
+                <button type="submit" className="border-2 border-blue-700   hover:bg-blue-700 hover:text-white transition-all transition-duration:150ms font-medium hover:font-medium focus:outline-none  rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center  ">Submit</button>
             </form>
             <p style={{ color: 'red' }}> {error3?.message}</p>
             {errorMsg}

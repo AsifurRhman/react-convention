@@ -18,7 +18,7 @@ export default function App() {
     const copyReview = [...reviewes]
     const reverseReview = copyReview.reverse()
     useEffect(() => {
-        fetch("https://royal-convention-server.onrender.com/reviews/")
+        fetch("https://royal-convention-server.vercel.app/reviews/")
             .then(res => res.json())
             .then(res => {
                 setReviewes(res);

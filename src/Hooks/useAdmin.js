@@ -7,7 +7,7 @@ const useAdmin = user => {
         const email = user?.email
 
         if (email) {
-            fetch(`https://royal-convention-server.onrender.com/admin/${email}`, {
+            fetch(`https://royal-convention-server.vercel.app/admin/${email}`, {
                 method: 'GET',
                 headers: {
                     'content-type': 'application/json',

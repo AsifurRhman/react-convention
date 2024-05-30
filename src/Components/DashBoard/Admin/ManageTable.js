@@ -13,7 +13,7 @@ const ManageTable = ({ o, index, refetch, sendEvent, setModal, isLoading }) => {
 
   const [user] = useAuthState(auth)
   // const makeShip = () => {
-  //     fetch(`https://royal-convention-server.onrender.com//ship/${_id}`, {
+  //     fetch(`https://royal-convention-server.vercel.app//ship/${_id}`, {
   //         method: 'PUT',
   //         headers: {
   //             authorization: `Bearer ${localStorage.getItem('token')}`
@@ -43,7 +43,7 @@ const ManageTable = ({ o, index, refetch, sendEvent, setModal, isLoading }) => {
     const sendEmail = email;
     const sendDiscount = e.target.discount.value
     console.log(sendDiscount, sendEmail);
-    fetch(`https://royal-convention-server.onrender.com/discount/${sendEmail}`, {
+    fetch(`https://royal-convention-server.vercel.app/discount/${sendEmail}`, {
       method: 'PATCH',
       headers: {
         'content-type': 'application/json',

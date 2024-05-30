@@ -33,7 +33,7 @@ const AddPackage = () => {
                     }
                     console.log(tools)
                     //send data to db
-                    fetch(`https://royal-convention-server.onrender.com/package`, {
+                    fetch(`https://royal-convention-server.vercel.app/package`, {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

@@ -6,7 +6,7 @@ const useServiceDetail = (id) => {
     const [item, setItem] = useState([]);  
     useEffect(() => {
         
-            const url = `https://royal-convention-server.onrender.com/package/${id}`
+            const url = `https://royal-convention-server.vercel.app/package/${id}`
             fetch(url)
             .then(response => response.json())
         .then(data=>setItem(data))
