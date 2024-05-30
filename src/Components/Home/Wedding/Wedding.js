@@ -11,7 +11,7 @@ const Wedding = () => {
     const [stage, setStage] = useState([])
     console.log(stage,'stage');
     useEffect(() => {
-        fetch('https://royal-convention-server.onrender.com/wedding')
+        fetch('https://royal-convention-server.vercel.app/wedding')
         .then(response => response.json())
     .then(data=> setStage(data))
       }, [])

@@ -7,7 +7,7 @@ const BusinessMeeting = () => {
     const [businessstage, setbusinessStage] = useState([])
    
     useEffect(() => {
-        fetch('https://royal-convention-server.onrender.com/business')
+        fetch('https://royal-convention-server.vercel.app/business')
         .then(response => response.json())
     .then(data=>  setbusinessStage(data))
       }, [])

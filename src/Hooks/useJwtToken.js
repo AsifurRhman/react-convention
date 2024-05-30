@@ -17,7 +17,7 @@ const useJwtToken = user => {
             console.log(currentUser, 'jwt-token-currentuser');
             // console.log({ email });
             if (email) {
-                fetch(`https://royal-convention-server.onrender.com/user/${email}`, {
+                fetch(`https://royal-convention-server.vercel.app/user/${email}`, {
                     method: 'PUT',
                     headers: {
                         'content-type': 'application/json'

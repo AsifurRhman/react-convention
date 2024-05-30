@@ -7,7 +7,7 @@ const ThemeParty = () => {
     const [themestage, setThemeStage] = useState([])
    
     useEffect(() => {
-        fetch('https://royal-convention-server.onrender.com/themebirthday')
+        fetch('https://royal-convention-server.vercel.app/themebirthday')
         .then(response => response.json())
     .then(data=> setThemeStage(data))
       }, [])

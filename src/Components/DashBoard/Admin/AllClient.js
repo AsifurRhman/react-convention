@@ -6,7 +6,7 @@ import ClientDiscount from './ClientDiscount';
 const AllClient = () => {
 
 
-    const { data: orders, isLoading, refetch } = useQuery('orders', () => fetch(`https://royal-convention-server.onrender.com/order`, {
+    const { data: orders, isLoading, refetch } = useQuery('orders', () => fetch(`https://royal-convention-server.vercel.app/order`, {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('token')}`

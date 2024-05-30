@@ -8,7 +8,7 @@ const NormalParty = () => {
     const [normalstage, setNormalStage] = useState([])
    
     useEffect(() => {
-        fetch('https://royal-convention-server.onrender.com/normalbirthday')
+        fetch('https://royal-convention-server.vercel.app/normalbirthday')
         .then(response => response.json())
     .then(data=> setNormalStage(data))
       }, [])

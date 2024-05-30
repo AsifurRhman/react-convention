@@ -1,10 +1,14 @@
 import React from 'react';
 import { toast } from 'react-toastify';
 import noImage from '../../../no-image.png'
+import useAdmin from '../../../Hooks/useAdmin';
 const UserRow = ({ user, index, refetch }) => {
     const { email, role, name, img } = user
+    const [admin] = useAdmin(user)
+    // console.log(admin,"admin from admin")
+    // console.log(email,"email from admin")
     const makeAdmin = () => {
-        fetch(`https://royal-convention-server.onrender.com/user/admin/${email}`, {
+        fetch(`https://royal-convention-server.vercel.app/user/admin/${email}`, {
             method: 'PUT',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('token')}`
@@ -24,12 +28,34 @@ const UserRow = ({ user, index, refetch }) => {
             })
 
     }
+    const demoteAdmin = () => {
+      
+        fetch(`https://royal-convention-server.vercel.app/user/demote-from-admin/${email}`, {
+            method: 'PUT',
+            headers: {
+                authorization: `Bearer ${localStorage.getItem('token')}`
+            }
+        }
+
+        )
+            .then(res => res.json())
+            .then(data => {
+                if (data.modifiedCount > 0) {
+                    refetch()
+                    toast.success('You demote this user from admin')
+                }
+                else {
+                    toast.error(`Sorry!!! You can't demote  admin.Only admin can do this`)
+                }
+            })
+
+    }
     const giveDiscount = (e) => {
         e.preventDefault()
         const sendEmail = email;
         const sendDiscount = e.target.discount.value
         console.log(sendDiscount, sendEmail);
-        fetch(`https://royal-convention-server.onrender.com/discount/${sendEmail}`, {
+        fetch(`https://royal-convention-server.vercel.app/discount/${sendEmail}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json',
@@ -83,7 +109,11 @@ const UserRow = ({ user, index, refetch }) => {
             </td>
             <td><span className="font-bold">{name}</span></td>
             <td><span className="font-bold">{email}</span></td>
-            <td>{role==="admin" ? <span className='text-green-700 sp-style'> Admin</span> : <button onClick={makeAdmin} className="btn btn-xs">Promote</button>}</td>
+            <td>{role === "admin" ? <>
+                <span className='text-green-700 sp-style'> Admin</span>
+                <button onClick={demoteAdmin} className="btn btn-xs bg-red-500 ml-5 hover:bg-red-700 ">Demote</button>
+            </>
+                 : <button onClick={makeAdmin} className="btn btn-xs">Promote</button>}</td>
             {/* <td>
                 {
                     offerSent
